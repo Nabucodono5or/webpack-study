@@ -2,6 +2,8 @@ import { parseInputs } from "./utils/parse-inputs";
 import { inputsAreValid } from "./utils/inputs-are-valid";
 import "./main.scss";
 
+console.log("Hi!");
+
 export const run = (alertService, componentService) => {
   alertService.hideErrors();
 
