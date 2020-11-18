@@ -13,6 +13,21 @@ module.exports = {
         test: /\.scss$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.html$/i,
+        use: ["html-loader"],
+      },
+      {
+        test: /\.(png|jpg|svg|gif)$/i,
+        use: {
+          loader: "file-loader",
+          options: {
+            publicPath: "assets",
+            name: "[name].[hash].[ext]",
+            outputPath: "assets",
+          },
+        },
+      },
     ],
   },
 };
